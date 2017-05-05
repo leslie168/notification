@@ -61,6 +61,12 @@ public class LineMessageAPI {
 		}
     }
 	
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	String hello(){
+		
+		return "hello";
+	}
+	
 	@RequestMapping(value = "/line/send/{mesg}", method = RequestMethod.GET)
 	String sendMessage(@PathVariable String mesg){
 		/*StringWriter sw = new StringWriter();
